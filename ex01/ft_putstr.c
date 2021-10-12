@@ -6,11 +6,12 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 15:37:38 by coder             #+#    #+#             */
-/*   Updated: 2021/10/12 15:49:54 by coder            ###   ########.fr       */
+/*   Updated: 2021/10/12 16:27:18 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <unistd.h>
+#include <unistd.h>
+
 void	ft_putstr(char *str)
 {
 	int	count;

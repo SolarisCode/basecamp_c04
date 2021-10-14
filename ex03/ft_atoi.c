@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 16:29:11 by coder             #+#    #+#             */
-/*   Updated: 2021/10/12 22:28:23 by coder            ###   ########.fr       */
+/*   Updated: 2021/10/14 15:26:03 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ int	ft_atoi(char *str)
 	minus = fr_count_minus(str, first_min, last_min);
 	count = last_min;
 	flag = 0;
-	while (str[last_min] != '\0' && flag == 0)
+	while (str[count] != '\0' && flag == 0)
 	{
 		if (str[count] >= 48 && str[count] <= 57)
 			count ++;
@@ -115,8 +115,6 @@ int	ft_atoi(char *str)
 }
 
 // #include <stdio.h>
-
-// int	ft_atoi(char *str);
 
 // int	main(void)
 // {

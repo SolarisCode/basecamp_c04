@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 15:53:13 by coder             #+#    #+#             */
-/*   Updated: 2021/10/12 16:25:06 by coder            ###   ########.fr       */
+/*   Updated: 2021/10/15 02:24:41 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,22 @@ void	ft_putnbr(int nb)
 	if (nb == -2147483648)
 	{
 		write(1, "-2147483648", 11);
+		return ;
 	}
-	else if (nb < 10 && nb >= 0)
+	if (nb < 0)
 	{
-		nb += 48;
-		write(1, &nb, 1);
+		write(1, "-", 1);
+		nb *= -1;
 	}
-	else if (nb > 10)
+	if (nb > 9)
 	{
 		ft_putnbr(nb / 10);
 		ft_putnbr(nb % 10);
 	}
 	else
 	{
-		write(1, "-", 1);
-		ft_putnbr(nb * -1);
+		nb += 48;
+		write(1, &nb, 1);
 	}
 }
 
